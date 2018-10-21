@@ -1,0 +1,13 @@
+version: "3"
+services:
+    plexsync:
+        image: "plexsync:dev"
+        build:
+            context: .
+            dockerfile: Dockerfile
+        hostname: plexsync
+        stdin_open: true
+        tty: true
+        working_dir: '/plexsync-dev'
+        volumes:
+            - ".:/plexsync-dev"
